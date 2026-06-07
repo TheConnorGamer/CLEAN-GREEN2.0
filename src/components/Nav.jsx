@@ -53,7 +53,7 @@ export default function Nav() {
         WebkitBackdropFilter: scrolled ? 'blur(14px)' : 'none',
       }}>
         <div style={{ maxWidth: '1360px', margin: '0 auto', padding: '0 32px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '72px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '88px' }}>
 
             {/* Logo */}
             <a
@@ -61,25 +61,21 @@ export default function Nav() {
               onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
               style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}
             >
-              <div style={{
-                background: scrolled ? 'transparent' : 'white',
-                borderRadius: scrolled ? '0' : '6px',
-                padding: scrolled ? '0' : '5px 10px',
-                transition: 'background 0.3s, padding 0.3s',
-                display: 'flex', alignItems: 'center',
-              }}>
-                <img
-                  src="/LOGO.png"
-                  alt="Clean & Green Services"
-                  style={{
-                    height: scrolled ? '44px' : '38px',
-                    width: 'auto',
-                    display: 'block',
-                    transition: 'height 0.3s',
-                    objectFit: 'contain',
-                  }}
-                />
-              </div>
+              <img
+                src="/LOGO.png"
+                alt="Clean & Green Services"
+                style={{
+                  height: scrolled ? '80px' : '72px',
+                  width: 'auto',
+                  display: 'block',
+                  transition: 'all 0.3s',
+                  objectFit: 'contain',
+                  mixBlendMode: scrolled ? 'multiply' : 'normal',
+                  filter: scrolled
+                    ? 'none'
+                    : 'drop-shadow(0 1px 3px rgba(0,0,0,0.4)) brightness(1.1)',
+                }}
+              />
             </a>
 
             {/* Desktop nav */}
