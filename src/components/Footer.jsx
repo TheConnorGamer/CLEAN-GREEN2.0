@@ -83,17 +83,22 @@ export default function Footer() {
         }}>
           {/* Brand */}
           <div>
-            <div style={{ marginBottom: '12px' }}>
+            <div style={{
+              background: 'white',
+              borderRadius: '10px',
+              padding: '8px 16px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              marginBottom: '14px',
+            }}>
               <img
                 src="/LOGO.png"
                 alt="Clean & Green Services"
                 style={{
-                  height: '80px',
+                  height: '72px',
                   width: 'auto',
                   display: 'block',
                   objectFit: 'contain',
-                  mixBlendMode: 'screen',
-                  filter: 'brightness(1.15) drop-shadow(0 1px 4px rgba(0,0,0,0.3))',
                 }}
               />
             </div>

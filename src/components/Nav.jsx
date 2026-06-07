@@ -53,7 +53,7 @@ export default function Nav() {
         WebkitBackdropFilter: scrolled ? 'blur(14px)' : 'none',
       }}>
         <div style={{ maxWidth: '1360px', margin: '0 auto', padding: '0 32px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '88px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
 
             {/* Logo */}
             <a
@@ -61,21 +61,26 @@ export default function Nav() {
               onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
               style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}
             >
-              <img
-                src="/LOGO.png"
-                alt="Clean & Green Services"
-                style={{
-                  height: scrolled ? '80px' : '72px',
-                  width: 'auto',
-                  display: 'block',
-                  transition: 'all 0.3s',
-                  objectFit: 'contain',
-                  mixBlendMode: scrolled ? 'multiply' : 'normal',
-                  filter: scrolled
-                    ? 'none'
-                    : 'drop-shadow(0 1px 3px rgba(0,0,0,0.4)) brightness(1.1)',
-                }}
-              />
+              <div style={{
+                background: 'white',
+                borderRadius: '10px',
+                padding: '6px 14px',
+                display: 'flex',
+                alignItems: 'center',
+                boxShadow: scrolled ? 'none' : '0 2px 16px rgba(0,0,0,0.25)',
+                transition: 'box-shadow 0.3s',
+              }}>
+                <img
+                  src="/LOGO.png"
+                  alt="Clean & Green Services"
+                  style={{
+                    height: '56px',
+                    width: 'auto',
+                    display: 'block',
+                    objectFit: 'contain',
+                  }}
+                />
+              </div>
             </a>
 
             {/* Desktop nav */}
