@@ -83,14 +83,7 @@ export default function Footer() {
         }}>
           {/* Brand */}
           <div>
-            <div style={{
-              background: 'white',
-              borderRadius: '10px',
-              padding: '8px 16px',
-              display: 'inline-flex',
-              alignItems: 'center',
-              marginBottom: '14px',
-            }}>
+            <div style={{ marginBottom: '14px' }}>
               <img
                 src="/LOGO.png"
                 alt="Clean & Green Services"
@@ -99,6 +92,7 @@ export default function Footer() {
                   width: 'auto',
                   display: 'block',
                   objectFit: 'contain',
+                  filter: 'drop-shadow(0 1px 4px rgba(0,0,0,0.3))',
                 }}
               />
             </div>
